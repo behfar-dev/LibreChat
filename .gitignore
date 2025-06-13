@@ -68,7 +68,6 @@ librechat.yml
 
 # Environment
 .npmrc
-.env*
 my.secrets
 !**/.env.example
 !**/.env.test.example
@@ -76,7 +75,6 @@ cache.json
 api/data/
 owner.yml
 archive
-.vscode/settings.json
 src/style - official.css
 /e2e/specs/.test-results/
 /e2e/playwright-report/
@@ -124,3 +122,4 @@ helm/**/.values.yaml
 
 # SAML Idp cert
 *.cert
+config.bat

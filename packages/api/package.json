@@ -14,17 +14,17 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && rollup -c --bundleConfigAsCjs",
-    "build:watch": "rollup -c -w --bundleConfigAsCjs",
+    "build": "node init && npm run clean && rollup -c --bundleConfigAsCjs",
+    "build:watch": "node init && rollup -c -w --bundleConfigAsCjs",
     "test": "jest --coverage --watch",
     "test:ci": "jest --coverage --ci",
     "verify": "npm run test:ci",
     "b:clean": "bun run rimraf dist",
     "b:build": "bun run b:clean && bun run rollup -c --silent --bundleConfigAsCjs",
-    "start:everything-sse": "node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/examples/everything/sse.ts",
-    "start:everything": "node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/demo/everything.ts",
-    "start:filesystem": "node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/demo/filesystem.ts",
-    "start:servers": "node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/demo/servers.ts"
+    "start:everything-sse": "node init && node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/examples/everything/sse.ts",
+    "start:everything": "node init && node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/demo/everything.ts",
+    "start:filesystem": "node init && node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/demo/filesystem.ts",
+    "start:servers": "node init && node -r dotenv/config --loader ./tsconfig-paths-bootstrap.mjs --experimental-specifier-resolution=node ./src/demo/servers.ts"
   },
   "repository": {
     "type": "git",
