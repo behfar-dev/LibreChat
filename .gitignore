@@ -68,7 +68,6 @@ librechat.yml
 
 # Environment
 .npmrc
-.env*
 my.secrets
 !**/.env.example
 !**/.env.test.example
@@ -124,3 +123,4 @@ helm/**/.values.yaml
 
 # SAML Idp cert
 *.cert
+config.bat
